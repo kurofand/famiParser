@@ -23,8 +23,6 @@ def getInfFromTable(body,shopOnPage=5):
 		shopType=row[0].find('img').get('alt', '')
 		addr.append('\n'+shopType+row[0].text+'\n'+row[1].text)
 		addr=addr+alt
-#	for a in addr:
-#		print(a)
 	return addr
 
 body=getHTMLText('http://as.chizumaru.com/famima/articleList?account=famima&accmd=0&c2=1&c1=1,2,3')
@@ -59,5 +57,3 @@ for prefecture in prefecture_list:
 		file.close()
 		print(prefecture.text+' done')
 print('done')
-
-#text file struct - name\n address\n latitude&longitude
